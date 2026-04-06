@@ -6,7 +6,7 @@
 
 using namespace std;
 
-long long int check(vector<long long int> req_time, long long int products, long long int time) {
+long long int check(vector<long long int>& req_time, long long int products, long long int time) {
     long long int total_products {0};
     for (auto machine : req_time) {
         total_products += time/machine;
@@ -16,7 +16,7 @@ long long int check(vector<long long int> req_time, long long int products, long
     return total_products;
 }
 
-long long int time_needed(vector<long long int> req_time, long long int products) {
+long long int time_needed(vector<long long int>& req_time, long long int products) {
     long long int left = 1, right = req_time.back()*products;
     long long int time = -1;
 
